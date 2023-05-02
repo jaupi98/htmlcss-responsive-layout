@@ -12,7 +12,20 @@
   }
   /* layoy rules */
   .container{
-    width: 100%;
+    max-width:600px;
+    margin: 0 auto;
+
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+  .col-double, .col-30{
+    width:calc(100% - 20px);
+    height: 300px;
+    background-color: red;
+    margin: 10px;
+
   }
   .left-logo, .right-menu{
     height:100px;
@@ -31,21 +44,59 @@
   .hamburger{
     background-color:green;
   }
+  .flex{
+    display: flex;
+    flex-direction: column;
+  }
+  .content{
+    background-color: lightblue;
+     border-radius: 20px;
+  }
+  .content div{
+    padding: 10px;
+  }
   /* tablet */
-  @media screen and (min-width:769px) {
-    
+  @media screen and (min-width:768px) {
+    .container{
+        max-width: 750px;
+    }
+    .content{
+        flex-direction: row
+        
+        
+        
+        
+        ;
+    }
+    .row{
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    .col-double{
+        width:calc(100% / 3 * 2 - 20px) ;
+    }
+    .col-30{
+        width: calc(100% / 3 - 20px);
+    }
   }
   /* deskktop */
   @media screen and (min-width: 991px) {
-    
-  }
+    .container{
+        max-width: 950px; 
+    }
 
-  /*  large desktop */
- @media screen and (min-width: 1200px) {
     .extended-menu{
         display:block;
     }
     .hamburger{
         display:none;
+    }
+  }
+
+  /*  large desktop */
+ @media screen and (min-width: 1200px) {
+    .container{
+        max-width :1140px; 
     }
  }
