@@ -1,0 +1,51 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  }
+  header{
+    background-color:rgb(0, 83, 110) ;
+  }
+  .header-flex{
+    display:flex;
+    justify-content: space-between;
+  }
+  /* layoy rules */
+  .container{
+    width: 100%;
+  }
+  .left-logo, .right-menu{
+    height:100px;
+    width: 100px;
+    background-color: yellow;
+  }
+  .hamburger, .extended-menu{
+    width:100% ;
+    height: 100%;
+  }
+  .extended-menu{
+    background-color: red;
+    display: none;
+  }
+
+  .hamburger{
+    background-color:green;
+  }
+  /* tablet */
+  @media screen and (min-width:769px) {
+    
+  }
+  /* deskktop */
+  @media screen and (min-width: 991px) {
+    
+  }
+
+  /*  large desktop */
+ @media screen and (min-width: 1200px) {
+    .extended-menu{
+        display:block;
+    }
+    .hamburger{
+        display:none;
+    }
+ }
